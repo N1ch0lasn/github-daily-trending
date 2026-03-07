@@ -9,11 +9,11 @@ on:
       min_stars:
         description: 'Minimum stars'
         required: false
-        default: '500'
+        default: '300'
       max_forks:
         description: 'Max projects to fork'
         required: false
-        default: '3'
+        default: '2'
 
 jobs:
   fetch-and-fork:
@@ -57,17 +57,27 @@ jobs:
             day: 'numeric'
           });
           
-          const minStars = process.env.INPUT_MIN_STARS || '500';
-          const maxForks = parseInt(process.env.INPUT_MAX_FORKS) || 3;
+          const minStars = process.env.INPUT_MIN_STARS || '300';
+          const maxForks = parseInt(process.env.INPUT_MAX_FORKS) || 2;
+          const desiredTopics = [
+            'cloudflare', 'workers', 'pages', 'serverless', 'edge',
+            'tool', 'tools', 'productivity', 'utility', 'utilities',
+            'bookmark', 'shortener', 'status-page', 'dashboard', 'monitoring',
+            'api', 'template', 'boilerplate', 'starter', 'saas'
+          ];
+          const excludeTopics = [
+            'awesome', 'tutorial', 'course', 'interview', 'leetcode', 'ebook', 'game'
+          ];
           
           // GitHub API options
           const options = {
             hostname: 'api.github.com',
-            path: `/search/repositories?q=stars:>${minStars}+pushed:>=2025-01-01&sort=stars&order=desc&per_page=20`,
+            path: `/search/repositories?q=stars:>${minStars}+archived:false+fork:false+pushed:>=2025-01-01&sort=updated&order=desc&per_page=50`,
             method: 'GET',
             headers: {
               'User-Agent': 'Node.js',
-              'Authorization': `token ${process.env.GITHUB_TOKEN}`
+              'Authorization': `token ${process.env.GITHUB_TOKEN}`,
+              'Accept': 'application/vnd.github+json'
             }
           };
           
@@ -85,14 +95,46 @@ jobs:
             res.on('data', (chunk) => data += chunk);
             res.on('end', () => {
               try {
-                const projects = JSON.parse(data).items || [];
+                const rawProjects = JSON.parse(data).items || [];
+                const projects = rawProjects
+                  .map((proj) => {
+                    const topicsArr = Array.isArray(proj.topics) ? proj.topics : [];
+                    const text = [
+                      proj.name || '',
+                      proj.full_name || '',
+                      proj.description || '',
+                      topicsArr.join(' '),
+                      proj.language || ''
+                    ].join(' ').toLowerCase();
+
+                    const desiredHits = desiredTopics.filter(t => text.includes(t)).length;
+                    const excludeHits = excludeTopics.filter(t => text.includes(t)).length;
+                    const isCloudflareFriendly = /(cloudflare|workers|pages|serverless|edge|template|starter|api|tool|dashboard|monitor|bookmark|short|status)/.test(text);
+                    const hasGoodSignals = proj.stargazers_count >= Number(minStars) && !proj.archived && !proj.fork;
+                    const score = desiredHits * 3 + (isCloudflareFriendly ? 6 : 0) + Math.min(Math.floor((proj.stargazers_count || 0) / 1000), 8) - excludeHits * 5;
+
+                    return {
+                      ...proj,
+                      score,
+                      desiredHits,
+                      excludeHits,
+                      isCloudflareFriendly,
+                      topicsArr,
+                      usefulLabel: isCloudflareFriendly ? '适合 Cloudflare / 工具向' : '偏通用工具'
+                    };
+                  })
+                  .filter(proj => proj.excludeHits === 0)
+                  .filter(proj => proj.score >= 6)
+                  .sort((a, b) => b.score - a.score)
+                  .slice(0, 12);
+
                 const newForks = [];
                 const skippedProjects = [];
                 
                 let content = `# GitHub 每日推荐 - ${chineseDate}\n\n`;
-                content += `自动生成 | 精选适合部署到 Cloudflare 的有趣项目\n\n`;
+                content += `自动生成 | 偏实用、偏 Cloudflare、偏工具类的项目推荐\n\n`;
                 content += `---\n\n`;
-                content += `## 🔥 今日热门项目\n\n`;
+                content += `## 🔥 今日推荐项目\n\n`;
                 
                 let forkCount = 0;
                 
@@ -100,17 +142,19 @@ jobs:
                   const stars = proj.stargazers_count || 0;
                   const forks = proj.forks_count || 0;
                   const desc = proj.description || '暂无描述';
-                  const topics = proj.topics?.slice(0, 5).join(' · ') || '';
+                  const topics = proj.topicsArr?.slice(0, 6).join(' · ') || '';
                   const fullName = proj.full_name;
+                  const language = proj.language || '未知';
                   
                   // Check if already forked
                   const alreadyForked = forkedProjects.some(p => p.fullName === fullName);
                   
                   content += `### ${index + 1}. [${fullName}](${proj.html_url})\n\n`;
                   content += `${desc}\n\n`;
-                  content += `- ⭐ **${stars.toLocaleString()}** stars`;
-                  content += ` | 🍴 **${forks.toLocaleString()}** forks`;
+                  content += `- ⭐ **${stars.toLocaleString()}** stars | 🍴 **${forks.toLocaleString()}** forks | 🧠 ${proj.usefulLabel}`;
+                  content += `\n- 💻 语言：${language}`;
                   if (topics) content += `\n- 🏷️ ${topics}`;
+                  if (proj.homepage) content += `\n- 🌐 ${proj.homepage}`;
                   
                   if (alreadyForked) {
                     content += `\n- ✅ 已 Fork\n`;
@@ -122,7 +166,9 @@ jobs:
                       fullName: fullName,
                       forkedDate: dateStr,
                       stars: stars,
-                      description: desc
+                      description: desc,
+                      language: language,
+                      score: proj.score
                     });
                     forkCount++;
                   } else {
@@ -135,9 +181,10 @@ jobs:
                 content += `---\n\n`;
                 content += `## 📋 筛选标准\n\n`;
                 content += `- ✅ 开源免费\n`;
-                content += `- ✅ 可以部署到 Cloudflare Pages/Workers\n`;
-                content += `- ✅ 有趣、实用、有创意\n`;
-                content += `- ✅ 文档清晰，易于部署\n\n`;
+                content += `- ✅ 优先 Cloudflare Pages / Workers / Edge 场景\n`;
+                content += `- ✅ 优先工具类、效率类、可直接拿来玩的项目\n`;
+                content += `- ✅ 排除教程、题库、纯游戏、收藏清单类仓库\n`;
+                content += `- ✅ 近期活跃更新\n\n`;
                 
                 content += `---\n\n`;
                 content += `## 🍴 今日自动 Fork\n\n`;
