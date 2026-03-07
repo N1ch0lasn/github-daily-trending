@@ -60,13 +60,16 @@ jobs:
           const minStars = process.env.INPUT_MIN_STARS || '300';
           const maxForks = parseInt(process.env.INPUT_MAX_FORKS) || 2;
           const desiredTopics = [
-            'cloudflare', 'workers', 'pages', 'serverless', 'edge',
+            'cloudflare', 'workers', 'worker', 'pages', 'page', 'serverless', 'edge',
             'tool', 'tools', 'productivity', 'utility', 'utilities',
-            'bookmark', 'shortener', 'status-page', 'dashboard', 'monitoring',
-            'api', 'template', 'boilerplate', 'starter', 'saas'
+            'bookmark', 'shortener', 'url-shortener', 'status-page', 'dashboard', 'monitoring',
+            'api', 'openapi', 'form', 'contact-form', 'upload', 'storage', 'file-share',
+            'pastebin', 'snippet', 'analytics', 'rss', 'feed', 'email', 'temporary-email',
+            'template', 'boilerplate', 'starter', 'saas', 'proxy', 'redirect', 'image', 'ocr'
           ];
           const excludeTopics = [
-            'awesome', 'tutorial', 'course', 'interview', 'leetcode', 'ebook', 'game'
+            'awesome', 'tutorial', 'course', 'interview', 'leetcode', 'ebook', 'books', 'book',
+            'roadmap', 'curriculum', 'algorithms', 'algorithm', 'learning', 'education', 'game', 'games'
           ];
           
           // GitHub API options
@@ -109,9 +112,10 @@ jobs:
 
                     const desiredHits = desiredTopics.filter(t => text.includes(t)).length;
                     const excludeHits = excludeTopics.filter(t => text.includes(t)).length;
-                    const isCloudflareFriendly = /(cloudflare|workers|pages|serverless|edge|template|starter|api|tool|dashboard|monitor|bookmark|short|status)/.test(text);
-                    const hasGoodSignals = proj.stargazers_count >= Number(minStars) && !proj.archived && !proj.fork;
-                    const score = desiredHits * 3 + (isCloudflareFriendly ? 6 : 0) + Math.min(Math.floor((proj.stargazers_count || 0) / 1000), 8) - excludeHits * 5;
+                    const isCloudflareFriendly = /(cloudflare|workers|pages|serverless|edge)/.test(text);
+                    const isDeployable = /(worker|workers|pages|page|serverless|edge|api|tool|dashboard|monitor|bookmark|short|status|upload|storage|paste|snippet|form|proxy|redirect|analytics|rss|email|image|ocr|template|starter|boilerplate|saas)/.test(text);
+                    const hasFrontendOrJsSignals = /(typescript|javascript|vue|react|svelte|astro|node|html|css)/.test(text);
+                    const score = desiredHits * 4 + (isCloudflareFriendly ? 8 : 0) + (isDeployable ? 8 : 0) + (hasFrontendOrJsSignals ? 2 : 0) + Math.min(Math.floor((proj.stargazers_count || 0) / 1000), 6) - excludeHits * 8;
 
                     return {
                       ...proj,
@@ -119,20 +123,24 @@ jobs:
                       desiredHits,
                       excludeHits,
                       isCloudflareFriendly,
+                      isDeployable,
+                      hasFrontendOrJsSignals,
                       topicsArr,
-                      usefulLabel: isCloudflareFriendly ? '适合 Cloudflare / 工具向' : '偏通用工具'
+                      usefulLabel: isCloudflareFriendly ? 'Cloudflare 优先' : '可部署工具项目'
                     };
                   })
                   .filter(proj => proj.excludeHits === 0)
-                  .filter(proj => proj.score >= 6)
+                  .filter(proj => proj.isDeployable)
+                  .filter(proj => proj.desiredHits >= 1 || proj.isCloudflareFriendly)
+                  .filter(proj => proj.score >= 12)
                   .sort((a, b) => b.score - a.score)
-                  .slice(0, 12);
+                  .slice(0, 10);
 
                 const newForks = [];
                 const skippedProjects = [];
                 
                 let content = `# GitHub 每日推荐 - ${chineseDate}\n\n`;
-                content += `自动生成 | 偏实用、偏 Cloudflare、偏工具类的项目推荐\n\n`;
+                content += `自动生成 | 只保留可部署项目，优先 Cloudflare Workers / Pages，优先工具类\n\n`;
                 content += `---\n\n`;
                 content += `## 🔥 今日推荐项目\n\n`;
                 
@@ -180,11 +188,11 @@ jobs:
                 
                 content += `---\n\n`;
                 content += `## 📋 筛选标准\n\n`;
-                content += `- ✅ 开源免费\n`;
-                content += `- ✅ 优先 Cloudflare Pages / Workers / Edge 场景\n`;
-                content += `- ✅ 优先工具类、效率类、可直接拿来玩的项目\n`;
-                content += `- ✅ 排除教程、题库、纯游戏、收藏清单类仓库\n`;
-                content += `- ✅ 近期活跃更新\n\n`;
+                content += `- ✅ 必须是可部署项目，不收教程 / awesome / 书单 / 路线图\n`;
+                content += `- ✅ 优先 Cloudflare Workers / Pages / Edge 场景\n`;
+                content += `- ✅ 优先工具类、效率类、可直接上线玩的项目\n`;
+                content += `- ✅ 优先近期活跃更新的仓库\n`;
+                content += `- ✅ 尽量过滤纯学习资料、算法题库、纯游戏类仓库\n\n`;
                 
                 content += `---\n\n`;
                 content += `## 🍴 今日自动 Fork\n\n`;
