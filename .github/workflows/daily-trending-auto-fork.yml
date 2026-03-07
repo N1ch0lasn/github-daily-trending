@@ -178,7 +178,7 @@ jobs:
                   const projectDir = `已 Fork 项目/${repo}`;
                   fs.mkdirSync(projectDir, { recursive: true });
                   
-                  const projectInfo = `# ${repo}\n\n`;
+                  let projectInfo = `# ${repo}\n\n`;
                   projectInfo += `- **仓库**: [${fullName}](https://github.com/${fullName})\n`;
                   projectInfo += `- **Fork 日期**: ${dateStr}\n`;
                   projectInfo += `- **Stars**: ${projects.find(p => p.full_name === fullName)?.stargazers_count || 0}\n\n`;
