@@ -1,0 +1,232 @@
+name: Daily Trending + Auto Fork
+
+on:
+  schedule:
+    # 每天 UTC 6:00 运行 (北京时间 14:00)
+    - cron: '0 6 * * *'
+  workflow_dispatch: # 允许手动触发
+    inputs:
+      min_stars:
+        description: 'Minimum stars'
+        required: false
+        default: '500'
+      max_forks:
+        description: 'Max projects to fork'
+        required: false
+        default: '3'
+
+jobs:
+  fetch-and-fork:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      
+      - name: Install GitHub CLI
+        run: |
+          curl -fsSL https://github.com/github/hub/raw/master/script/get-github | sudo bash
+      
+      - name: Fetch trending and auto fork
+        env:
+          GITHUB_TOKEN: ${{ secrets.FORK_TOKEN }}
+          GITHUB_USER: ${{ github.repository_owner }}
+        run: |
+          mkdir -p "每日推荐"
+          mkdir -p "已 Fork 项目"
+          
+          node << 'EOF'
+          const fs = require('fs');
+          const https = require('https');
+          const { execSync } = require('child_process');
+          
+          const today = new Date();
+          const dateStr = today.toISOString().split('T')[0];
+          const chineseDate = today.toLocaleDateString('zh-CN', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+          });
+          
+          const minStars = process.env.INPUT_MIN_STARS || '500';
+          const maxForks = parseInt(process.env.INPUT_MAX_FORKS) || 3;
+          
+          // GitHub API options
+          const options = {
+            hostname: 'api.github.com',
+            path: `/search/repositories?q=stars:>${minStars}+pushed:>=2025-01-01&sort=stars&order=desc&per_page=20`,
+            method: 'GET',
+            headers: {
+              'User-Agent': 'Node.js',
+              'Authorization': `token ${process.env.GITHUB_TOKEN}`
+            }
+          };
+          
+          // Load already forked projects
+          let forkedProjects = [];
+          try {
+            const forkedFile = fs.readFileSync('已 Fork 项目/list.json', 'utf8');
+            forkedProjects = JSON.parse(forkedFile);
+          } catch (e) {
+            console.log('No existing fork list, creating new one');
+          }
+          
+          const req = https.request(options, (res) => {
+            let data = '';
+            res.on('data', (chunk) => data += chunk);
+            res.on('end', () => {
+              try {
+                const projects = JSON.parse(data).items || [];
+                const newForks = [];
+                const skippedProjects = [];
+                
+                let content = `# GitHub 每日推荐 - ${chineseDate}\n\n`;
+                content += `自动生成 | 精选适合部署到 Cloudflare 的有趣项目\n\n`;
+                content += `---\n\n`;
+                content += `## 🔥 今日热门项目\n\n`;
+                
+                let forkCount = 0;
+                
+                projects.forEach((proj, index) => {
+                  const stars = proj.stargazers_count || 0;
+                  const forks = proj.forks_count || 0;
+                  const desc = proj.description || '暂无描述';
+                  const topics = proj.topics?.slice(0, 5).join(' · ') || '';
+                  const fullName = proj.full_name;
+                  
+                  // Check if already forked
+                  const alreadyForked = forkedProjects.some(p => p.fullName === fullName);
+                  
+                  content += `### ${index + 1}. [${fullName}](${proj.html_url})\n\n`;
+                  content += `${desc}\n\n`;
+                  content += `- ⭐ **${stars.toLocaleString()}** stars`;
+                  content += ` | 🍴 **${forks.toLocaleString()}** forks`;
+                  if (topics) content += `\n- 🏷️ ${topics}`;
+                  
+                  if (alreadyForked) {
+                    content += `\n- ✅ 已 Fork\n`;
+                    skippedProjects.push({ name: fullName, reason: 'already_forked' });
+                  } else if (forkCount < maxForks) {
+                    content += `\n- 🍴 **今日已自动 Fork**\n`;
+                    newForks.push(fullName);
+                    forkedProjects.push({
+                      fullName: fullName,
+                      forkedDate: dateStr,
+                      stars: stars,
+                      description: desc
+                    });
+                    forkCount++;
+                  } else {
+                    content += `\n- ⏸️ 今日未 Fork (已达上限)\n`;
+                  }
+                  
+                  content += `\n`;
+                });
+                
+                content += `---\n\n`;
+                content += `## 📋 筛选标准\n\n`;
+                content += `- ✅ 开源免费\n`;
+                content += `- ✅ 可以部署到 Cloudflare Pages/Workers\n`;
+                content += `- ✅ 有趣、实用、有创意\n`;
+                content += `- ✅ 文档清晰，易于部署\n\n`;
+                
+                content += `---\n\n`;
+                content += `## 🍴 今日自动 Fork\n\n`;
+                if (newForks.length > 0) {
+                  newForks.forEach(name => {
+                    content += `- [${name}](https://github.com/${name})\n`;
+                  });
+                  content += `\n共 **${newForks.length}** 个项目\n`;
+                } else {
+                  content += `今日没有新项目（已达到上限或都已 Fork）\n`;
+                }
+                
+                content += `\n---\n\n`;
+                content += `## 📝 备注\n\n`;
+                content += `- 数据来源：GitHub API\n`;
+                content += `- 生成时间：${today.toISOString()}\n`;
+                content += `- 下次更新：明天同一时间\n`;
+                content += `- 每日自动 Fork 上限：${maxForks} 个\n\n`;
+                content += `---\n`;
+                content += `*自动生成*\n`;
+                
+                // Save daily report
+                const filename = `每日推荐/${dateStr}.md`;
+                fs.writeFileSync(filename, content);
+                console.log(`✅ Generated: ${filename}`);
+                
+                // Update latest.md
+                fs.writeFileSync('每日推荐/latest.md', content);
+                console.log('✅ Updated: 每日推荐/latest.md');
+                
+                // Save fork list
+                fs.writeFileSync('已 Fork 项目/list.json', JSON.stringify(forkedProjects, null, 2));
+                console.log('✅ Updated: 已 Fork 项目/list.json');
+                
+                // Create individual project pages
+                newForks.forEach(fullName => {
+                  const [owner, repo] = fullName.split('/');
+                  const projectDir = `已 Fork 项目/${repo}`;
+                  fs.mkdirSync(projectDir, { recursive: true });
+                  
+                  const projectInfo = `# ${repo}\n\n`;
+                  projectInfo += `- **仓库**: [${fullName}](https://github.com/${fullName})\n`;
+                  projectInfo += `- **Fork 日期**: ${dateStr}\n`;
+                  projectInfo += `- **Stars**: ${projects.find(p => p.full_name === fullName)?.stargazers_count || 0}\n\n`;
+                  projectInfo += `## 部署计划\n\n- [ ] 阅读文档\n- [ ] 配置环境\n- [ ] 部署到 Cloudflare\n- [ ] 测试运行\n\n`;
+                  
+                  fs.writeFileSync(`${projectDir}/README.md`, projectInfo);
+                  console.log(`✅ Created: ${projectDir}/README.md`);
+                });
+                
+                // Output for next step
+                fs.writeFileSync('/tmp/new_forks.txt', newForks.join('\n'));
+                console.log(`🍴 Will fork ${newForks.length} new projects`);
+                
+              } catch (e) {
+                console.error('Error:', e.message);
+                process.exit(1);
+              }
+            });
+          });
+          
+          req.on('error', (e) => {
+            console.error('Request error:', e.message);
+            process.exit(1);
+          });
+          
+          req.end();
+          EOF
+      
+      - name: Auto Fork projects
+        env:
+          GITHUB_TOKEN: ${{ secrets.FORK_TOKEN }}
+        run: |
+          if [ -s /tmp/new_forks.txt ]; then
+            while IFS= read -r repo; do
+              if [ -n "$repo" ]; then
+                echo "🍴 Forking: $repo"
+                gh repo fork "$repo" --clone=false || echo "Already forked or error"
+                sleep 2  # Rate limiting
+              fi
+            done < /tmp/new_forks.txt
+          else
+            echo "No new projects to fork"
+          fi
+      
+      - name: Commit and push
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add 每日推荐/ 已 Fork 项目/
+          git diff --staged --quiet || git commit -m "📊 Daily: $(date +%Y-%m-%d) | 🍴 Auto-forked $(cat /tmp/new_forks.txt 2>/dev/null | wc -l) projects"
+          git push

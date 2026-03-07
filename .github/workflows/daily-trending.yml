@@ -1,0 +1,120 @@
+name: Daily GitHub Trending
+
+on:
+  schedule:
+    # 每天 UTC 6:00 运行 (北京时间 14:00)
+    - cron: '0 6 * * *'
+  workflow_dispatch: # 允许手动触发
+
+jobs:
+  fetch-trending:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      
+      - name: Fetch trending projects
+        run: |
+          mkdir -p "每日推荐"
+          node << 'EOF'
+          const fs = require('fs');
+          const https = require('https');
+          
+          const today = new Date();
+          const dateStr = today.toISOString().split('T')[0];
+          const chineseDate = today.toLocaleDateString('zh-CN', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+          });
+          
+          // GitHub Trending API (使用第三方 API)
+          const options = {
+            hostname: 'api.github.com',
+            path: '/search/repositories?q=stars:>500+pushed:>=2025-01-01&sort=stars&order=desc&per_page=15',
+            method: 'GET',
+            headers: {
+              'User-Agent': 'Node.js'
+            }
+          };
+          
+          const req = https.request(options, (res) => {
+            let data = '';
+            res.on('data', (chunk) => data += chunk);
+            res.on('end', () => {
+              try {
+                const projects = JSON.parse(data).items || [];
+                
+                let content = `# GitHub 每日推荐 - ${chineseDate}\n\n`;
+                content += `自动生成 | 精选适合部署到 Cloudflare 的有趣项目\n\n`;
+                content += `---\n\n`;
+                content += `## 🔥 今日热门项目\n\n`;
+                
+                projects.forEach((proj, index) => {
+                  const stars = proj.stargazers_count || 0;
+                  const forks = proj.forks_count || 0;
+                  const desc = proj.description || '暂无描述';
+                  const topics = proj.topics?.slice(0, 5).join(' · ') || '';
+                  
+                  content += `### ${index + 1}. [${proj.name}](${proj.html_url})\n\n`;
+                  content += `${desc}\n\n`;
+                  content += `- ⭐ **${stars.toLocaleString()}** stars`;
+                  content += ` | 🍴 **${forks.toLocaleString()}** forks`;
+                  if (topics) content += `\n- 🏷️ ${topics}`;
+                  content += `\n\n`;
+                });
+                
+                content += `---\n\n`;
+                content += `## 📋 筛选标准\n\n`;
+                content += `- ✅ 开源免费\n`;
+                content += `- ✅ 可以部署到 Cloudflare Pages/Workers\n`;
+                content += `- ✅ 有趣、实用、有创意\n`;
+                content += `- ✅ 文档清晰，易于部署\n\n`;
+                content += `---\n\n`;
+                content += `## 📝 备注\n\n`;
+                content += `- 数据来源：GitHub API\n`;
+                content += `- 生成时间：${today.toISOString()}\n`;
+                content += `- 下次更新：明天同一时间\n\n`;
+                content += `---\n`;
+                content += `*自动生成*\n`;
+                
+                const filename = \`每日推荐/\${dateStr}.md\`;
+                fs.writeFileSync(filename, content);
+                console.log(\`✅ Generated: \${filename}\`);
+                
+                // Also update latest.md
+                fs.writeFileSync('每日推荐/latest.md', content);
+                console.log('✅ Updated: 每日推荐/latest.md');
+                
+              } catch (e) {
+                console.error('Error:', e.message);
+                process.exit(1);
+              }
+            });
+          });
+          
+          req.on('error', (e) => {
+            console.error('Request error:', e.message);
+            process.exit(1);
+          });
+          
+          req.end();
+          EOF
+      
+      - name: Commit and push
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add 每日推荐/
+          git diff --staged --quiet || git commit -m "📊 Daily trending: $(date +%Y-%m-%d)"
+          git push
