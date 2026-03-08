@@ -16,5 +16,21 @@
     "forkedDate": "2026-03-07",
     "stars": 437859,
     "description": "freeCodeCamp.org's open-source codebase and curriculum. Learn math, programming, and computer science for free."
+  },
+  {
+    "fullName": "massCodeIO/massCode",
+    "forkedDate": "2026-03-08",
+    "stars": 6651,
+    "description": "A free and open source code snippet manager for developers",
+    "language": "TypeScript",
+    "score": 32
+  },
+  {
+    "fullName": "qixing-jk/all-api-hub",
+    "forkedDate": "2026-03-08",
+    "stars": 1904,
+    "description": "一站式管理 New API 兼容中转站账号：余额/用量看板、自动签到、密钥一键导出到常用应用、网页内 API 可用性测试、渠道与模型同步/重定向 | New‑API relay manager: balance/usage, auto check‑in, one‑click key export to popular clients, in‑page API checks, channel/model sync & redirect",
+    "language": "TypeScript",
+    "score": 27
   }
 ]
