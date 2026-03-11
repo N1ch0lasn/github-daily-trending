@@ -64,5 +64,21 @@
     "description": "A fancy self-hosted monitoring tool",
     "language": "JavaScript",
     "score": 28
+  },
+  {
+    "fullName": "grafana/grafana",
+    "forkedDate": "2026-03-11",
+    "stars": 72652,
+    "description": "The open and composable observability and data visualization platform. Visualize metrics, logs, and traces from multiple sources like Prometheus, Loki, Elasticsearch, InfluxDB, Postgres and many more. ",
+    "language": "TypeScript",
+    "score": 32
+  },
+  {
+    "fullName": "rilldata/rill",
+    "forkedDate": "2026-03-11",
+    "stars": 2521,
+    "description": "Rill is a tool for effortlessly transforming data sets into powerful, opinionated dashboards using SQL.  BI-as-code.",
+    "language": "Go",
+    "score": 32
   }
 ]
