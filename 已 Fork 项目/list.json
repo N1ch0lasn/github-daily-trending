@@ -80,5 +80,21 @@
     "description": "Rill is a tool for effortlessly transforming data sets into powerful, opinionated dashboards using SQL.  BI-as-code.",
     "language": "Go",
     "score": 32
+  },
+  {
+    "fullName": "cosmiciron/vmprint",
+    "forkedDate": "2026-03-12",
+    "stars": 387,
+    "description": "A pure-JS, tiny typesetting engine with bit-perfect PDF output on everything—from Cloudflare Workers to the browser. No more Headless Chrome to just print text. AND -- try the static demos on the home page below and see for yourself.",
+    "language": "TypeScript",
+    "score": 34
+  },
+  {
+    "fullName": "osaurus-ai/osaurus",
+    "forkedDate": "2026-03-12",
+    "stars": 4021,
+    "description": "AI edge infrastructure for macOS. Run local or cloud models, share tools across apps via MCP, and power AI workflows with a native, always-on runtime.",
+    "language": "Swift",
+    "score": 32
   }
 ]
