@@ -96,5 +96,21 @@
     "description": "AI edge infrastructure for macOS. Run local or cloud models, share tools across apps via MCP, and power AI workflows with a native, always-on runtime.",
     "language": "Swift",
     "score": 32
+  },
+  {
+    "fullName": "affaan-m/everything-claude-code",
+    "forkedDate": "2026-03-13",
+    "stars": 73918,
+    "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+    "language": "JavaScript",
+    "score": 32
+  },
+  {
+    "fullName": "lobehub/lobehub",
+    "forkedDate": "2026-03-13",
+    "stars": 73551,
+    "description": "The ultimate space for work and life — to find, build, and collaborate with agent teammates that grow with you. We are taking agent harness to the next level — enabling multi-agent collaboration, effortless agent team design, and introducing agents as the unit of work interaction.",
+    "language": "TypeScript",
+    "score": 28
   }
 ]
