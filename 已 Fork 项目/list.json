@@ -112,5 +112,21 @@
     "description": "The ultimate space for work and life — to find, build, and collaborate with agent teammates that grow with you. We are taking agent harness to the next level — enabling multi-agent collaboration, effortless agent team design, and introducing agents as the unit of work interaction.",
     "language": "TypeScript",
     "score": 28
+  },
+  {
+    "fullName": "RtlZeroMemory/Rezi",
+    "forkedDate": "2026-03-14",
+    "stars": 544,
+    "description": "Rezi — TypeScript TUI, Near-Native Performance. Powered by deterministic C engine.",
+    "language": "TypeScript",
+    "score": 22
+  },
+  {
+    "fullName": "inikulin/parse5",
+    "forkedDate": "2026-03-14",
+    "stars": 3882,
+    "description": "HTML parsing/serialization toolset for Node.js. WHATWG HTML Living Standard (aka HTML5)-compliant.",
+    "language": "TypeScript",
+    "score": 21
   }
 ]
