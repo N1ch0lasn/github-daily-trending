@@ -176,5 +176,21 @@
     "description": "Apache Doris is an easy-to-use, high performance and unified analytics database.",
     "language": "Java",
     "score": 22
+  },
+  {
+    "fullName": "abhigyanpatwari/GitNexus",
+    "forkedDate": "2026-03-18",
+    "stars": 17023,
+    "description": "GitNexus: The Zero-Server Code Intelligence Engine -       GitNexus is a client-side knowledge graph creator that runs entirely in your browser. Drop in a GitHub repo or ZIP file, and get an interactive knowledge graph wit a built in Graph RAG Agent. Perfect for code exploration",
+    "language": "TypeScript",
+    "score": 28
+  },
+  {
+    "fullName": "bytedance/deer-flow",
+    "forkedDate": "2026-03-18",
+    "stars": 31567,
+    "description": "An open-source SuperAgent harness that researches, codes, and creates. With the help of sandboxes, memories, tools, skills and subagents, it handles different levels of tasks that could take minutes to hours.",
+    "language": "Python",
+    "score": 24
   }
 ]
