@@ -192,5 +192,21 @@
     "description": "An open-source SuperAgent harness that researches, codes, and creates. With the help of sandboxes, memories, tools, skills and subagents, it handles different levels of tasks that could take minutes to hours.",
     "language": "Python",
     "score": 24
+  },
+  {
+    "fullName": "chatwoot/chatwoot",
+    "forkedDate": "2026-03-19",
+    "stars": 27886,
+    "description": "Open-source live-chat, email support, omni-channel desk. An alternative to Intercom, Zendesk, Salesforce Service Cloud etc. 🔥💬",
+    "language": "Ruby",
+    "score": 28
+  },
+  {
+    "fullName": "Panniantong/Agent-Reach",
+    "forkedDate": "2026-03-19",
+    "stars": 9929,
+    "description": "Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees.",
+    "language": "Python",
+    "score": 26
   }
 ]
