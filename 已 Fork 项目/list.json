@@ -208,5 +208,21 @@
     "description": "Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees.",
     "language": "Python",
     "score": 26
+  },
+  {
+    "fullName": "cfwuya1/CF-DNS-Clone",
+    "forkedDate": "2026-03-20",
+    "stars": 337,
+    "description": "想拥有别人的优选域名吗？CF-DNS-Clon 让“白嫖”变得简单！只需通过 Cloudflare Workers 便捷部署，即可轻松克隆心仪的域名。同时，它还会化身勤劳的“搬运工”，自动搜罗各大优选 IP 网站，将最新鲜的 IP 资源整理好，直接送到你的 GitHub 仓库中。",
+    "language": "JavaScript",
+    "score": 30
+  },
+  {
+    "fullName": "web-infra-dev/rspack",
+    "forkedDate": "2026-03-20",
+    "stars": 12571,
+    "description": "Fast Rust-based bundler for the web with a modernized webpack API 🦀",
+    "language": "Rust",
+    "score": 28
   }
 ]
