@@ -240,5 +240,21 @@
     "description": "Real-time global intelligence dashboard — AI-powered news aggregation, geopolitical monitoring, and infrastructure tracking in a unified situational awareness interface",
     "language": "TypeScript",
     "score": 24
+  },
+  {
+    "fullName": "keploy/keploy",
+    "forkedDate": "2026-03-22",
+    "stars": 16369,
+    "description": "Open-source platform for creating safe, isolated production sandboxes for API, integration, and E2E testing.",
+    "language": "Go",
+    "score": 30
+  },
+  {
+    "fullName": "ledger/ledger",
+    "forkedDate": "2026-03-22",
+    "stars": 5884,
+    "description": "Double-entry accounting system with a command-line reporting interface",
+    "language": "C++",
+    "score": 29
   }
 ]
