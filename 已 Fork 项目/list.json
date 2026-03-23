@@ -256,5 +256,21 @@
     "description": "Double-entry accounting system with a command-line reporting interface",
     "language": "C++",
     "score": 29
+  },
+  {
+    "fullName": "Jackett/Jackett",
+    "forkedDate": "2026-03-23",
+    "stars": 15090,
+    "description": "API Support for your favorite torrent trackers",
+    "language": "C#",
+    "score": 26
+  },
+  {
+    "fullName": "frank890417/taiwan-md",
+    "forkedDate": "2026-03-23",
+    "stars": 728,
+    "description": "🇹🇼 讓全世界完整認識台灣 | An open-source, AI-friendly knowledge base about Taiwan",
+    "language": "Astro",
+    "score": 22
   }
 ]
