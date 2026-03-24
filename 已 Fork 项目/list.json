@@ -272,5 +272,21 @@
     "description": "🇹🇼 讓全世界完整認識台灣 | An open-source, AI-friendly knowledge base about Taiwan",
     "language": "Astro",
     "score": 22
+  },
+  {
+    "fullName": "usebruno/bruno",
+    "forkedDate": "2026-03-24",
+    "stars": 42112,
+    "description": "Opensource IDE For Exploring and Testing API's (lightweight alternative to Postman/Insomnia)",
+    "language": "JavaScript",
+    "score": 32
+  },
+  {
+    "fullName": "n8n-io/n8n",
+    "forkedDate": "2026-03-24",
+    "stars": 180755,
+    "description": "Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.",
+    "language": "TypeScript",
+    "score": 24
   }
 ]
