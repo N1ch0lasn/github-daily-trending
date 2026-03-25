@@ -288,5 +288,21 @@
     "description": "Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.",
     "language": "TypeScript",
     "score": 24
+  },
+  {
+    "fullName": "jackwener/opencli",
+    "forkedDate": "2026-03-25",
+    "stars": 6346,
+    "description": "Make Any Website & Tool Your CLI. A universal CLI Hub and AI-native runtime. Transform any website, Electron app, or local binary into a standardized command-line interface. Built for AI Agents to discover, learn, and execute tools seamlessly via a unified AGENT.md integration.",
+    "language": "TypeScript",
+    "score": 28
+  },
+  {
+    "fullName": "Kong/insomnia",
+    "forkedDate": "2026-03-25",
+    "stars": 38173,
+    "description": "The open-source, cross-platform API client for GraphQL, REST, WebSockets, SSE and gRPC. With Cloud, Local and Git storage.",
+    "language": "TypeScript",
+    "score": 28
   }
 ]
