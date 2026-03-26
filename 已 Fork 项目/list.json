@@ -304,5 +304,21 @@
     "description": "The open-source, cross-platform API client for GraphQL, REST, WebSockets, SSE and gRPC. With Cloud, Local and Git storage.",
     "language": "TypeScript",
     "score": 28
+  },
+  {
+    "fullName": "pagescms/pagescms",
+    "forkedDate": "2026-03-26",
+    "stars": 3524,
+    "description": "The simplest CMS you'll ever need. Manage content and media right in your GitHub repository.",
+    "language": "TypeScript",
+    "score": 29
+  },
+  {
+    "fullName": "zotero/zotero-connectors",
+    "forkedDate": "2026-03-26",
+    "stars": 689,
+    "description": "Chrome, Firefox, Edge, and Safari extensions for Zotero",
+    "language": "JavaScript",
+    "score": 22
   }
 ]
