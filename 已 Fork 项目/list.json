@@ -336,5 +336,21 @@
     "description": "Nuclei POC，每2小时更新 | 自动整合全网Nuclei的漏洞POC，实时同步更新最新POC，保存已被删除的POC。通过批量克隆Github项目，获取Nuclei POC，并将POC按类别分类存放，使用Github Action实现。已有41w+POC，其中3.5w+高质量POC",
     "language": "未知",
     "score": 22
+  },
+  {
+    "fullName": "honojs/middleware",
+    "forkedDate": "2026-03-28",
+    "stars": 899,
+    "description": "monorepo for Hono third-party middleware/helpers/wrappers",
+    "language": "TypeScript",
+    "score": 30
+  },
+  {
+    "fullName": "rudrankriyam/App-Store-Connect-CLI",
+    "forkedDate": "2026-03-28",
+    "stars": 3387,
+    "description": "Fast, scriptable CLI for the App Store Connect API. Automate TestFlight, builds, submissions, signing, analytics, screenshots, subscriptions, and more. JSON-first, no interactive prompts",
+    "language": "Go",
+    "score": 27
   }
 ]
