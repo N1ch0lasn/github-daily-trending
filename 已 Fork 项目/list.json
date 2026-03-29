@@ -352,5 +352,21 @@
     "description": "Fast, scriptable CLI for the App Store Connect API. Automate TestFlight, builds, submissions, signing, analytics, screenshots, subscriptions, and more. JSON-first, no interactive prompts",
     "language": "Go",
     "score": 27
+  },
+  {
+    "fullName": "openclaw/openclaw",
+    "forkedDate": "2026-03-29",
+    "stars": 339761,
+    "description": "Your own personal AI assistant. Any OS. Any Platform. The lobster way. 🦞 ",
+    "language": "TypeScript",
+    "score": 20
+  },
+  {
+    "fullName": "gotify/server",
+    "forkedDate": "2026-03-29",
+    "stars": 14803,
+    "description": "A simple server for sending and receiving messages in real-time per WebSocket. (Includes a sleek web-ui)",
+    "language": "Go",
+    "score": 20
   }
 ]
