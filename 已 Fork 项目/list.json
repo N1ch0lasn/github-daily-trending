@@ -368,5 +368,21 @@
     "description": "A simple server for sending and receiving messages in real-time per WebSocket. (Includes a sleek web-ui)",
     "language": "Go",
     "score": 20
+  },
+  {
+    "fullName": "strapi/strapi",
+    "forkedDate": "2026-03-30",
+    "stars": 71730,
+    "description": "🚀 Strapi is the leading open-source headless CMS. It’s 100% JavaScript/TypeScript, fully customizable, and developer-first.",
+    "language": "TypeScript",
+    "score": 24
+  },
+  {
+    "fullName": "besu-eth/besu",
+    "forkedDate": "2026-03-30",
+    "stars": 1788,
+    "description": "An enterprise-grade Java-based, Apache 2.0 licensed Ethereum client https://wiki.hyperledger.org/display/besu",
+    "language": "Java",
+    "score": 21
   }
 ]
