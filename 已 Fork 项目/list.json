@@ -416,5 +416,21 @@
     "description": "PDFsam, a desktop application to split, merge, mix, rotate PDF files and extract pages",
     "language": "Java",
     "score": 28
+  },
+  {
+    "fullName": "xingpingcn/enhanced-FaaS-in-China",
+    "forkedDate": "2026-04-02",
+    "stars": 2908,
+    "description": "提升部署在cloudflare、vercel或netlify的网页在中国的访问速度和稳定性 Improve the access speed and stability in China of web pages hosted on cloudflare, vercel or netlify by merely changing your CNAME record. cf优选域名 | cf优选ip | cloudflare | vercel | netlify | 加速 | 国内 | 中国 | 境内 | 大陆",
+    "language": "Python",
+    "score": 34
+  },
+  {
+    "fullName": "canonical/microk8s",
+    "forkedDate": "2026-04-02",
+    "stars": 9241,
+    "description": "MicroK8s is a small, fast, single-package Kubernetes for datacenters and the edge.",
+    "language": "Python",
+    "score": 26
   }
 ]
