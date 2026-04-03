@@ -432,5 +432,21 @@
     "description": "MicroK8s is a small, fast, single-package Kubernetes for datacenters and the edge.",
     "language": "Python",
     "score": 26
+  },
+  {
+    "fullName": "openreplay/openreplay",
+    "forkedDate": "2026-04-03",
+    "stars": 11900,
+    "description": "Session replay, cobrowsing and product analytics you can self-host. Best for reproducing issues and iterating on your product.",
+    "language": "TypeScript",
+    "score": 32
+  },
+  {
+    "fullName": "Significant-Gravitas/AutoGPT",
+    "forkedDate": "2026-04-03",
+    "stars": 183090,
+    "description": "AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.",
+    "language": "Python",
+    "score": 26
   }
 ]
