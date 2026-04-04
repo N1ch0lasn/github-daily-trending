@@ -448,5 +448,21 @@
     "description": "AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.",
     "language": "Python",
     "score": 26
+  },
+  {
+    "fullName": "jarrodwatts/claude-hud",
+    "forkedDate": "2026-04-04",
+    "stars": 16662,
+    "description": "A Claude Code plugin that shows what's happening - context usage, active tools, running agents, and todo progress",
+    "language": "JavaScript",
+    "score": 24
+  },
+  {
+    "fullName": "kubernetes-sigs/headlamp",
+    "forkedDate": "2026-04-04",
+    "stars": 6129,
+    "description": "A Kubernetes web UI that is fully-featured, user-friendly and extensible",
+    "language": "TypeScript",
+    "score": 24
   }
 ]
