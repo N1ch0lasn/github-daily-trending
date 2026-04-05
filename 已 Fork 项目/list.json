@@ -464,5 +464,21 @@
     "description": "A Kubernetes web UI that is fully-featured, user-friendly and extensible",
     "language": "TypeScript",
     "score": 24
+  },
+  {
+    "fullName": "conda-forge/staged-recipes",
+    "forkedDate": "2026-04-05",
+    "stars": 794,
+    "description": "A place to submit conda recipes before they become fully fledged conda-forge feedstocks",
+    "language": "Python",
+    "score": 24
+  },
+  {
+    "fullName": "libretro/RetroArch",
+    "forkedDate": "2026-04-05",
+    "stars": 12903,
+    "description": "Cross-platform, sophisticated frontend for the libretro API. Licensed GPLv3.",
+    "language": "C",
+    "score": 22
   }
 ]
