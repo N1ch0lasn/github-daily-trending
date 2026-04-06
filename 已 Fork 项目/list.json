@@ -480,5 +480,21 @@
     "description": "Cross-platform, sophisticated frontend for the libretro API. Licensed GPLv3.",
     "language": "C",
     "score": 22
+  },
+  {
+    "fullName": "gslege/CloudflareIP",
+    "forkedDate": "2026-04-06",
+    "stars": 305,
+    "description": "全自动优选CF的IP，包含美国US，日本JP，新加坡SG，德国DE，荷兰NL等cloudflare每天每小时自动优选IP，自动生成CF免费Vless节点。",
+    "language": "Python",
+    "score": 38
+  },
+  {
+    "fullName": "Automattic/jetpack",
+    "forkedDate": "2026-04-06",
+    "stars": 1795,
+    "description": "Security, performance, marketing, and design tools — Jetpack is made by WordPress experts to make WP sites safer and faster, and help you grow your traffic.",
+    "language": "PHP",
+    "score": 23
   }
 ]
