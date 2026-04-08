@@ -512,5 +512,21 @@
     "description": "Milvus is a high-performance, cloud-native vector database built for scalable vector ANN search",
     "language": "Go",
     "score": 22
+  },
+  {
+    "fullName": "apache/apisix",
+    "forkedDate": "2026-04-08",
+    "stars": 16412,
+    "description": "The Cloud-Native API Gateway and AI Gateway",
+    "language": "Lua",
+    "score": 34
+  },
+  {
+    "fullName": "Kilo-Org/kilocode",
+    "forkedDate": "2026-04-08",
+    "stars": 17819,
+    "description": "Kilo is the all-in-one agentic engineering platform. Build, ship, and iterate faster with the most popular open source coding agent. #1 coding agent on OpenRouter. 1.5M+ Kilo Coders. 25T+ tokens processed",
+    "language": "TypeScript",
+    "score": 28
   }
 ]
