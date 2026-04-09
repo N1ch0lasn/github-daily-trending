@@ -528,5 +528,21 @@
     "description": "Kilo is the all-in-one agentic engineering platform. Build, ship, and iterate faster with the most popular open source coding agent. #1 coding agent on OpenRouter. 1.5M+ Kilo Coders. 25T+ tokens processed",
     "language": "TypeScript",
     "score": 28
+  },
+  {
+    "fullName": "safishamsi/graphify",
+    "forkedDate": "2026-04-09",
+    "stars": 14386,
+    "description": "AI coding assistant skill (Claude Code, Codex, OpenCode, OpenClaw, Factory Droid, Trae). Turn any folder of code, docs, papers, or images into a queryable knowledge graph",
+    "language": "Python",
+    "score": 30
+  },
+  {
+    "fullName": "baserow/baserow",
+    "forkedDate": "2026-04-09",
+    "stars": 4586,
+    "description": "Build databases, automations, apps & agents with AI — no code.  Open source platform available on cloud and self-hosted. GDPR, HIPAA, SOC 2 compliant. Best Airtable alternative.",
+    "language": "Python",
+    "score": 24
   }
 ]
