@@ -544,5 +544,21 @@
     "description": "Build databases, automations, apps & agents with AI — no code.  Open source platform available on cloud and self-hosted. GDPR, HIPAA, SOC 2 compliant. Best Airtable alternative.",
     "language": "Python",
     "score": 24
+  },
+  {
+    "fullName": "apocas/restai",
+    "forkedDate": "2026-04-10",
+    "stars": 483,
+    "description": "RESTai is an AIaaS (AI as a Service) open-source platform. Supports many public and local LLM suported by Ollama/vLLM/etc. Precise embeddings usage, tuning, analytics etc. Built-in image/audio generation with dynamic loading generators. Live chat deployment. Built-in block based graphical language. Prompt versioning and much more...",
+    "language": "Python",
+    "score": 24
+  },
+  {
+    "fullName": "wrtnlabs/autobe",
+    "forkedDate": "2026-04-10",
+    "stars": 1144,
+    "description": "AI Vibe Coding Agent of TS backend server, enhanced by compiler skills, generating 100% working code",
+    "language": "TypeScript",
+    "score": 23
   }
 ]
