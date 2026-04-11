@@ -560,5 +560,21 @@
     "description": "AI Vibe Coding Agent of TS backend server, enhanced by compiler skills, generating 100% working code",
     "language": "TypeScript",
     "score": 23
+  },
+  {
+    "fullName": "zeromicro/go-zero",
+    "forkedDate": "2026-04-11",
+    "stars": 32893,
+    "description": "A cloud-native Go microservices framework with cli tool for productivity.",
+    "language": "Go",
+    "score": 26
+  },
+  {
+    "fullName": "weekend-project-space/top-rss-list",
+    "forkedDate": "2026-04-11",
+    "stars": 6120,
+    "description": "订阅人数最多的rss源，中文优质rss源",
+    "language": "未知",
+    "score": 22
   }
 ]
