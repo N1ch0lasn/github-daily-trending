@@ -576,5 +576,21 @@
     "description": "订阅人数最多的rss源，中文优质rss源",
     "language": "未知",
     "score": 22
+  },
+  {
+    "fullName": "SeleniumHQ/docker-selenium",
+    "forkedDate": "2026-04-12",
+    "stars": 8619,
+    "description": "Provides a simple way to run Selenium Grid with Chrome, Firefox, and Edge using Container Platform, making it easier to perform browser automation at scale",
+    "language": "Shell",
+    "score": 38
+  },
+  {
+    "fullName": "neomjs/neo",
+    "forkedDate": "2026-04-12",
+    "stars": 3165,
+    "description": "The Application Engine for the AI Era. A multi-threaded, AI-native runtime with a persistent Scene Graph, enabling AI agents to introspect and mutate the living application structure in real-time.",
+    "language": "JavaScript",
+    "score": 33
   }
 ]
