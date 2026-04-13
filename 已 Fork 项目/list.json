@@ -592,5 +592,21 @@
     "description": "The Application Engine for the AI Era. A multi-threaded, AI-native runtime with a persistent Scene Graph, enabling AI agents to introspect and mutate the living application structure in real-time.",
     "language": "JavaScript",
     "score": 33
+  },
+  {
+    "fullName": "langfuse/langfuse",
+    "forkedDate": "2026-04-13",
+    "stars": 24814,
+    "description": "🪢 Open source LLM engineering platform: LLM Observability, metrics, evals, prompt management, playground, datasets. Integrates with OpenTelemetry, Langchain, OpenAI SDK, LiteLLM, and more. 🍊YC W23 ",
+    "language": "TypeScript",
+    "score": 28
+  },
+  {
+    "fullName": "ghostery/ghostery-extension",
+    "forkedDate": "2026-04-13",
+    "stars": 1669,
+    "description": "Ghostery Browser Extension for Firefox, Chrome, Opera, Edge and Safari",
+    "language": "JavaScript",
+    "score": 23
   }
 ]
