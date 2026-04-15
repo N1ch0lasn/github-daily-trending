@@ -624,5 +624,21 @@
     "description": "🖼️ Image Toolbox is a powerful app for advanced image manipulation. It offers dozens of features, from basic tools like crop and draw to filters, OCR, and a wide range of image processing options",
     "language": "Kotlin",
     "score": 30
+  },
+  {
+    "fullName": "We5ter/Scanners-Box",
+    "forkedDate": "2026-04-15",
+    "stars": 8883,
+    "description": "A powerful and open-source toolkit for hackers and security automation - 安全行业从业者自研开源扫描器合辑",
+    "language": "未知",
+    "score": 26
+  },
+  {
+    "fullName": "aloneguid/bt",
+    "forkedDate": "2026-04-15",
+    "stars": 405,
+    "description": "Browser Tamer - browser proxy for Windows with autodetection, rules, scripting. 100% local, no tracking, no registration.",
+    "language": "C++",
+    "score": 24
   }
 ]
