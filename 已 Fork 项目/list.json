@@ -656,5 +656,21 @@
     "description": "Scalar is an open-source API platform:　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　🌐 Modern REST API Client　　　　　　　　��　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　📖 Beautiful API References　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　✨ 1st-Class OpenAPI/Swagger Support",
     "language": "TypeScript",
     "score": 28
+  },
+  {
+    "fullName": "future-architect/vuls",
+    "forkedDate": "2026-04-17",
+    "stars": 12110,
+    "description": "Agent-less vulnerability scanner for Linux, FreeBSD, Container, WordPress, Programming language libraries, Network devices",
+    "language": "Go",
+    "score": 22
+  },
+  {
+    "fullName": "jdx/mise",
+    "forkedDate": "2026-04-17",
+    "stars": 26782,
+    "description": "dev tools, env vars, task runner",
+    "language": "Rust",
+    "score": 22
   }
 ]
