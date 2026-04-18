@@ -672,5 +672,21 @@
     "description": "dev tools, env vars, task runner",
     "language": "Rust",
     "score": 22
+  },
+  {
+    "fullName": "MarSeventh/CloudFlare-ImgBed",
+    "forkedDate": "2026-04-18",
+    "stars": 4847,
+    "description": "A serverless, open-source file hosting solution built on Cloudflare. Supports image hosting, secure file storage, and personal cloud drive capabilities.",
+    "language": "JavaScript",
+    "score": 46
+  },
+  {
+    "fullName": "biomejs/biome",
+    "forkedDate": "2026-04-18",
+    "stars": 24410,
+    "description": "A toolchain for web projects, aimed to provide functionalities to maintain them. Biome offers formatter and linter, usable via CLI and LSP.",
+    "language": "Rust",
+    "score": 24
   }
 ]
