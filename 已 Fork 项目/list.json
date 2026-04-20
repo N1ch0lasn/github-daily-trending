@@ -704,5 +704,21 @@
     "description": "Mago is a toolchain for PHP that aims to provide a set of tools to help developers write better code.",
     "language": "Rust",
     "score": 23
+  },
+  {
+    "fullName": "winsiderss/systeminformer",
+    "forkedDate": "2026-04-20",
+    "stars": 13942,
+    "description": "A free, powerful, multi-purpose tool that helps you monitor system resources, debug software and detect malware. Brought to you by Winsider Seminars & Solutions, Inc. @ http://www.windows-internals.com",
+    "language": "C",
+    "score": 30
+  },
+  {
+    "fullName": "nashsu/llm_wiki",
+    "forkedDate": "2026-04-20",
+    "stars": 1894,
+    "description": "LLM Wiki is a cross-platform desktop application that turns your documents into an organized, interlinked knowledge base — automatically. Instead of traditional RAG (retrieve-and-answer from scratch every time), the LLM incrementally builds and maintains a persistent wiki from your sources。",
+    "language": "TypeScript",
+    "score": 27
   }
 ]
