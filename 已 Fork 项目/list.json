@@ -720,5 +720,21 @@
     "description": "LLM Wiki is a cross-platform desktop application that turns your documents into an organized, interlinked knowledge base — automatically. Instead of traditional RAG (retrieve-and-answer from scratch every time), the LLM incrementally builds and maintains a persistent wiki from your sources。",
     "language": "TypeScript",
     "score": 27
+  },
+  {
+    "fullName": "Budibase/budibase",
+    "forkedDate": "2026-04-21",
+    "stars": 27837,
+    "description": "AI agents, automations and apps that run your operations. Model agnostic.",
+    "language": "TypeScript",
+    "score": 32
+  },
+  {
+    "fullName": "ultraworkers/claw-code",
+    "forkedDate": "2026-04-21",
+    "stars": 186879,
+    "description": "The repo is finally unlocked. enjoy the party! The fastest repo in history to surpass 100K stars ⭐. Join Discord: https://discord.gg/5TUQKqFWd Built in Rust using oh-my-codex.",
+    "language": "Rust",
+    "score": 30
   }
 ]
