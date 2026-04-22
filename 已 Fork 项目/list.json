@@ -736,5 +736,21 @@
     "description": "The repo is finally unlocked. enjoy the party! The fastest repo in history to surpass 100K stars ⭐. Join Discord: https://discord.gg/5TUQKqFWd Built in Rust using oh-my-codex.",
     "language": "Rust",
     "score": 30
+  },
+  {
+    "fullName": "mjmlio/mjml",
+    "forkedDate": "2026-04-22",
+    "stars": 18015,
+    "description": "MJML: the only framework that makes responsive-email easy",
+    "language": "JavaScript",
+    "score": 24
+  },
+  {
+    "fullName": "LedgerHQ/ledger-live",
+    "forkedDate": "2026-04-22",
+    "stars": 578,
+    "description": "Mono-repository for packages related to Ledger Live and its JavaScript ecosystem.",
+    "language": "TypeScript",
+    "score": 22
   }
 ]
