@@ -752,5 +752,21 @@
     "description": "Mono-repository for packages related to Ledger Live and its JavaScript ecosystem.",
     "language": "TypeScript",
     "score": 22
+  },
+  {
+    "fullName": "openobserve/openobserve",
+    "forkedDate": "2026-04-23",
+    "stars": 18610,
+    "description": "OpenObserve is an open-source observability platform for logs, metrics, traces, and frontend monitoring. A cost-effective alternative to Datadog, Splunk, and Elasticsearch with 140x lower storage costs and single binary deployment.",
+    "language": "TypeScript",
+    "score": 32
+  },
+  {
+    "fullName": "IBM/mcp-context-forge",
+    "forkedDate": "2026-04-23",
+    "stars": 3609,
+    "description": "An AI Gateway, registry, and proxy that sits in front of any MCP, A2A, or REST/gRPC APIs, exposing a unified endpoint with centralized discovery, guardrails and management. Optimizes Agent & Tool calling, and supports plugins.",
+    "language": "Python",
+    "score": 27
   }
 ]
