@@ -768,5 +768,21 @@
     "description": "An AI Gateway, registry, and proxy that sits in front of any MCP, A2A, or REST/gRPC APIs, exposing a unified endpoint with centralized discovery, guardrails and management. Optimizes Agent & Tool calling, and supports plugins.",
     "language": "Python",
     "score": 27
+  },
+  {
+    "fullName": "Erudika/para",
+    "forkedDate": "2026-04-24",
+    "stars": 565,
+    "description": "Multitenant backend server for building web and mobile apps rapidly. The backend for busy developers. (self-hosted or hosted)",
+    "language": "Java",
+    "score": 24
+  },
+  {
+    "fullName": "langgenius/dify",
+    "forkedDate": "2026-04-24",
+    "stars": 138996,
+    "description": "Production-ready platform for agentic workflow development.",
+    "language": "TypeScript",
+    "score": 20
   }
 ]
