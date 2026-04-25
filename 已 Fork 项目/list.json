@@ -784,5 +784,21 @@
     "description": "Production-ready platform for agentic workflow development.",
     "language": "TypeScript",
     "score": 20
+  },
+  {
+    "fullName": "semaphoreui/semaphore",
+    "forkedDate": "2026-04-25",
+    "stars": 13534,
+    "description": "Modern UI and powerful API for Ansible, Terraform/OpenTofu/Terragrunt, PowerShell and other DevOps tools.",
+    "language": "Go",
+    "score": 30
+  },
+  {
+    "fullName": "shadcn-ui/ui",
+    "forkedDate": "2026-04-25",
+    "stars": 112961,
+    "description": "A set of beautifully-designed, accessible components and a code distribution platform. Works with your favorite frameworks. Open Source. Open Code.",
+    "language": "TypeScript",
+    "score": 20
   }
 ]
