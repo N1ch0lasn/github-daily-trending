@@ -800,5 +800,21 @@
     "description": "A set of beautifully-designed, accessible components and a code distribution platform. Works with your favorite frameworks. Open Source. Open Code.",
     "language": "TypeScript",
     "score": 20
+  },
+  {
+    "fullName": "knadh/listmonk",
+    "forkedDate": "2026-04-26",
+    "stars": 19628,
+    "description": "High performance, self-hosted, newsletter and mailing list manager with a modern dashboard. Single binary app.",
+    "language": "Go",
+    "score": 26
+  },
+  {
+    "fullName": "cubist38/mlx-openai-server",
+    "forkedDate": "2026-04-26",
+    "stars": 320,
+    "description": "A high-performance API server that provides OpenAI-compatible endpoints for MLX models. Developed using Python and powered by the FastAPI framework, it provides an efficient, scalable, and user-friendly solution for running MLX-based vision and language models locally with an OpenAI-compatible interface.",
+    "language": "Python",
+    "score": 24
   }
 ]
