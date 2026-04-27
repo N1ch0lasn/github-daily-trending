@@ -816,5 +816,21 @@
     "description": "A high-performance API server that provides OpenAI-compatible endpoints for MLX models. Developed using Python and powered by the FastAPI framework, it provides an efficient, scalable, and user-friendly solution for running MLX-based vision and language models locally with an OpenAI-compatible interface.",
     "language": "Python",
     "score": 24
+  },
+  {
+    "fullName": "1Panel-dev/MaxKB",
+    "forkedDate": "2026-04-27",
+    "stars": 20827,
+    "description": "🔥 MaxKB is an open-source platform for building enterprise-grade agents.  强大易用的开源企业级智能体平台。",
+    "language": "Python",
+    "score": 30
+  },
+  {
+    "fullName": "apache/superset",
+    "forkedDate": "2026-04-27",
+    "stars": 72611,
+    "description": "Apache Superset is a Data Visualization and Data Exploration Platform",
+    "language": "TypeScript",
+    "score": 24
   }
 ]
