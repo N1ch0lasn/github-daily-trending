@@ -832,5 +832,21 @@
     "description": "Apache Superset is a Data Visualization and Data Exploration Platform",
     "language": "TypeScript",
     "score": 24
+  },
+  {
+    "fullName": "airbytehq/airbyte",
+    "forkedDate": "2026-04-28",
+    "stars": 21146,
+    "description": "The leading data integration platform for ETL / ELT data pipelines from APIs, databases & files to data warehouses, data lakes & data lakehouses. Both self-hosted and Cloud-hosted.",
+    "language": "Python",
+    "score": 22
+  },
+  {
+    "fullName": "timescale/timescaledb",
+    "forkedDate": "2026-04-28",
+    "stars": 22501,
+    "description": "A time-series database for high-performance real-time analytics packaged as a Postgres extension",
+    "language": "C",
+    "score": 22
   }
 ]
