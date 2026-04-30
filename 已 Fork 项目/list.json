@@ -864,5 +864,21 @@
     "description": "Web dashboard for Hermes Agent — multi-platform AI chat, session management, scheduled jobs, usage analytics & channel configuration (Telegram, Discord, Slack, WhatsApp)",
     "language": "TypeScript",
     "score": 24
+  },
+  {
+    "fullName": "git/git.github.io",
+    "forkedDate": "2026-04-30",
+    "stars": 366,
+    "description": "Git Developer Pages (This is NOT the place to discuss Git issues. See: https://git-scm.com/community)",
+    "language": "CSS",
+    "score": 26
+  },
+  {
+    "fullName": "eclipse-vertx/vert.x",
+    "forkedDate": "2026-04-30",
+    "stars": 14657,
+    "description": "Vert.x is a tool-kit for building reactive applications on the JVM",
+    "language": "Java",
+    "score": 24
   }
 ]
