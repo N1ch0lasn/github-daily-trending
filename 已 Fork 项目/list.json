@@ -880,5 +880,21 @@
     "description": "Vert.x is a tool-kit for building reactive applications on the JVM",
     "language": "Java",
     "score": 24
+  },
+  {
+    "fullName": "phishdestroy/destroylist",
+    "forkedDate": "2026-05-01",
+    "stars": 991,
+    "description": "Real-time phishing & scam domain blocklist — 130k+ curated threats, 888K+ community, free API, multiple formats",
+    "language": "HTML",
+    "score": 26
+  },
+  {
+    "fullName": "devopness/devopness",
+    "forkedDate": "2026-05-01",
+    "stars": 380,
+    "description": "DevOps Happiness: 1-click or 1-prompt MCP. Deploy apps + infra + CI/CD on your cloud. Happy humans + reliable agents. 🚀",
+    "language": "Python",
+    "score": 20
   }
 ]
