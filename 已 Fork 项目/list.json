@@ -928,5 +928,21 @@
     "description": "Query, provision and operate Cloud and SaaS resources and APIs using an extensible SQL based framework",
     "language": "Go",
     "score": 20
+  },
+  {
+    "fullName": "Open-Source-Legal/OpenContracts",
+    "forkedDate": "2026-05-04",
+    "stars": 1300,
+    "description": "Humans and AI agents, building knowledge bases together. Self-hosted document annotation, version control, semantic search, and MCP.",
+    "language": "Python",
+    "score": 21
+  },
+  {
+    "fullName": "lightdash/lightdash",
+    "forkedDate": "2026-05-04",
+    "stars": 5774,
+    "description": "Agentic BI. Analytics at the speed of code ⚡️",
+    "language": "TypeScript",
+    "score": 19
   }
 ]
