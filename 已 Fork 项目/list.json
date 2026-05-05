@@ -944,5 +944,21 @@
     "description": "Agentic BI. Analytics at the speed of code ⚡️",
     "language": "TypeScript",
     "score": 19
+  },
+  {
+    "fullName": "pulumi/pulumi",
+    "forkedDate": "2026-05-05",
+    "stars": 25143,
+    "description": "Pulumi - Infrastructure as Code in any programming language 🚀",
+    "language": "Go",
+    "score": 28
+  },
+  {
+    "fullName": "yandex/perforator",
+    "forkedDate": "2026-05-05",
+    "stars": 3402,
+    "description": "Perforator is a cluster-wide continuous profiling tool designed for large data centers",
+    "language": "C++",
+    "score": 23
   }
 ]
