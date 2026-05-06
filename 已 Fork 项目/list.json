@@ -960,5 +960,21 @@
     "description": "Perforator is a cluster-wide continuous profiling tool designed for large data centers",
     "language": "C++",
     "score": 23
+  },
+  {
+    "fullName": "OneUptime/oneuptime",
+    "forkedDate": "2026-05-06",
+    "stars": 6941,
+    "description": "Complete open-source monitoring and observability platform.",
+    "language": "TypeScript",
+    "score": 32
+  },
+  {
+    "fullName": "archestra-ai/archestra",
+    "forkedDate": "2026-05-06",
+    "stars": 3631,
+    "description": "Enterprise AI Platform with guardrails, MCP registry, gateway & orchestrator",
+    "language": "TypeScript",
+    "score": 29
   }
 ]
