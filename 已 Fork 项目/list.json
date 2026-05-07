@@ -976,5 +976,21 @@
     "description": "Enterprise AI Platform with guardrails, MCP registry, gateway & orchestrator",
     "language": "TypeScript",
     "score": 29
+  },
+  {
+    "fullName": "cloudflare/cloudflared",
+    "forkedDate": "2026-05-07",
+    "stars": 14100,
+    "description": "Cloudflare Tunnel client",
+    "language": "Go",
+    "score": 30
+  },
+  {
+    "fullName": "nexu-io/open-design",
+    "forkedDate": "2026-05-07",
+    "stars": 31233,
+    "description": "🎨 Local-first, open-source alternative to Anthropic's Claude Design. ⚡ 19 Skills · ✨ 71 brand-grade Design Systems 🖼 Generate web · desktop · mobile prototypes · slides · images · videos · HyperFrames 📦 Sandboxed preview · HTML/PDF/PPTX/MP4 export 🤖 Runs on Claude Code / Codex / Cursor / Gemini / OpenCode / Qwen / Copilot / Hermes / Kimi CLI.",
+    "language": "TypeScript",
+    "score": 28
   }
 ]
