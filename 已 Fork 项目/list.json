@@ -992,5 +992,21 @@
     "description": "🎨 Local-first, open-source alternative to Anthropic's Claude Design. ⚡ 19 Skills · ✨ 71 brand-grade Design Systems 🖼 Generate web · desktop · mobile prototypes · slides · images · videos · HyperFrames 📦 Sandboxed preview · HTML/PDF/PPTX/MP4 export 🤖 Runs on Claude Code / Codex / Cursor / Gemini / OpenCode / Qwen / Copilot / Hermes / Kimi CLI.",
     "language": "TypeScript",
     "score": 28
+  },
+  {
+    "fullName": "spool-lab/spool",
+    "forkedDate": "2026-05-08",
+    "stars": 444,
+    "description": "Search your Claude Code sessions, Codex history, GitHub stars, and 50+ sources — locally, instantly. Your AI agents can search too.",
+    "language": "TypeScript",
+    "score": 34
+  },
+  {
+    "fullName": "rustfs/rustfs",
+    "forkedDate": "2026-05-08",
+    "stars": 27202,
+    "description": "🚀2.3x faster than MinIO for 4KB object payloads. RustFS is an open-source, S3-compatible high-performance object storage system supporting migration and coexistence with other S3-compatible platforms such as MinIO and Ceph.",
+    "language": "Rust",
+    "score": 22
   }
 ]
