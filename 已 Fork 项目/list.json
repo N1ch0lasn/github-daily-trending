@@ -1024,5 +1024,21 @@
     "description": "The open-source managed agents platform. Turn coding agents into real teammates — assign tasks, track progress, compound skills.",
     "language": "TypeScript",
     "score": 20
+  },
+  {
+    "fullName": "appwrite/appwrite",
+    "forkedDate": "2026-05-10",
+    "stars": 56029,
+    "description": "Appwrite® - complete cloud infrastructure for your web, mobile and AI apps. Including Auth, Databases, Storage, Functions, Messaging, Hosting, Realtime and more",
+    "language": "TypeScript",
+    "score": 32
+  },
+  {
+    "fullName": "max-sixty/worktrunk",
+    "forkedDate": "2026-05-10",
+    "stars": 5020,
+    "description": "Worktrunk is a CLI for Git worktree management, designed for parallel AI agent workflows",
+    "language": "Rust",
+    "score": 21
   }
 ]
