@@ -1040,5 +1040,21 @@
     "description": "Worktrunk is a CLI for Git worktree management, designed for parallel AI agent workflows",
     "language": "Rust",
     "score": 21
+  },
+  {
+    "fullName": "cloudflare/workers-sdk",
+    "forkedDate": "2026-05-11",
+    "stars": 4054,
+    "description": "⛅️ Home to Wrangler, the CLI for Cloudflare Workers®",
+    "language": "TypeScript",
+    "score": 38
+  },
+  {
+    "fullName": "redisson/redisson",
+    "forkedDate": "2026-05-11",
+    "stars": 24319,
+    "description": "Redisson - Valkey & Redis Java client. Real-Time Data Platform. Sync/Async/RxJava/Reactive API. Over 50 Valkey and Redis based Java objects and services: Set, Multimap, SortedSet, Map, List, Queue, Deque, Semaphore, Lock, AtomicLong, Map Reduce, Bloom filter, Spring, Tomcat, Scheduler, JCache API, Hibernate, RPC, local cache..",
+    "language": "Java",
+    "score": 24
   }
 ]
