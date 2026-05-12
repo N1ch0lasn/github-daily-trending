@@ -1056,5 +1056,21 @@
     "description": "Redisson - Valkey & Redis Java client. Real-Time Data Platform. Sync/Async/RxJava/Reactive API. Over 50 Valkey and Redis based Java objects and services: Set, Multimap, SortedSet, Map, List, Queue, Deque, Semaphore, Lock, AtomicLong, Map Reduce, Bloom filter, Spring, Tomcat, Scheduler, JCache API, Hibernate, RPC, local cache..",
     "language": "Java",
     "score": 24
+  },
+  {
+    "fullName": "nymtech/nym-vpn-client",
+    "forkedDate": "2026-05-12",
+    "stars": 432,
+    "description": "Cross-platform open source VPN client built in Rust, with mixnet anonymity and WireGuard speed. Protects metadata, not just IP addresses. Zero-knowledge payments for unlinkable online activities.",
+    "language": "Rust",
+    "score": 32
+  },
+  {
+    "fullName": "mvanhorn/cli-printing-press",
+    "forkedDate": "2026-05-12",
+    "stars": 1642,
+    "description": "Every API has a secret identity. This finds it, absorbs every feature from every competing tool, then builds the GOAT CLI — designed for AI agents first, with SQLite sync, offline search, and compound insight commands.",
+    "language": "Go",
+    "score": 25
   }
 ]
