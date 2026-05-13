@@ -1072,5 +1072,21 @@
     "description": "Every API has a secret identity. This finds it, absorbs every feature from every competing tool, then builds the GOAT CLI — designed for AI agents first, with SQLite sync, offline search, and compound insight commands.",
     "language": "Go",
     "score": 25
+  },
+  {
+    "fullName": "OutlineFoundation/outline-server",
+    "forkedDate": "2026-05-13",
+    "stars": 6211,
+    "description": "Outline Server, developed by Jigsaw. The Outline Server is a proxy server that runs a Shadowsocks instance and provides a REST API for access key management.",
+    "language": "TypeScript",
+    "score": 24
+  },
+  {
+    "fullName": "polarsource/polar",
+    "forkedDate": "2026-05-13",
+    "stars": 9835,
+    "description": "Turn your software into a business.",
+    "language": "Python",
+    "score": 24
   }
 ]
