@@ -1088,5 +1088,21 @@
     "description": "Turn your software into a business.",
     "language": "Python",
     "score": 24
+  },
+  {
+    "fullName": "JerryZLiu/Dayflow",
+    "forkedDate": "2026-05-14",
+    "stars": 6014,
+    "description": "The automatic work journal. Privately turns your screen into a timeline of what you actually accomplished. Open-source and local-first.",
+    "language": "Swift",
+    "score": 26
+  },
+  {
+    "fullName": "juspay/hyperswitch",
+    "forkedDate": "2026-05-14",
+    "stars": 42677,
+    "description": "An open source payments switch written in Rust to make payments fast, reliable and affordable",
+    "language": "Rust",
+    "score": 24
   }
 ]
