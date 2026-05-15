@@ -1104,5 +1104,21 @@
     "description": "An open source payments switch written in Rust to make payments fast, reliable and affordable",
     "language": "Rust",
     "score": 24
+  },
+  {
+    "fullName": "dgtlmoon/changedetection.io",
+    "forkedDate": "2026-05-15",
+    "stars": 31466,
+    "description": "Best and simplest tool for website change detection, web page monitoring, and website change alerts. Perfect for tracking content changes, price drops, restock alerts, and website defacement monitoring—all for free or enjoy our SaaS plan!",
+    "language": "Python",
+    "score": 38
+  },
+  {
+    "fullName": "nhost/nhost",
+    "forkedDate": "2026-05-15",
+    "stars": 9155,
+    "description": "The Open Source Firebase Alternative with GraphQL.",
+    "language": "TypeScript",
+    "score": 36
   }
 ]
