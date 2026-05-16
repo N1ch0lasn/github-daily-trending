@@ -1120,5 +1120,21 @@
     "description": "The Open Source Firebase Alternative with GraphQL.",
     "language": "TypeScript",
     "score": 36
+  },
+  {
+    "fullName": "getagentseal/codeburn",
+    "forkedDate": "2026-05-16",
+    "stars": 6535,
+    "description": "See where your AI coding tokens go. Interactive TUI dashboard for Claude Code, Codex, and Cursor cost observability.",
+    "language": "TypeScript",
+    "score": 28
+  },
+  {
+    "fullName": "UniClipboard/UniClipboard",
+    "forkedDate": "2026-05-16",
+    "stars": 401,
+    "description": "Real-time clipboard sync across all your devices — local-first, peer-to-peer, and end-to-end encrypted. No account. No cloud dependency. No central server.",
+    "language": "Rust",
+    "score": 20
   }
 ]
