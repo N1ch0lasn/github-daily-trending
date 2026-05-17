@@ -1136,5 +1136,21 @@
     "description": "Real-time clipboard sync across all your devices — local-first, peer-to-peer, and end-to-end encrypted. No account. No cloud dependency. No central server.",
     "language": "Rust",
     "score": 20
+  },
+  {
+    "fullName": "getpaseo/paseo",
+    "forkedDate": "2026-05-17",
+    "stars": 6254,
+    "description": "Orchestrate coding agents remotely from your phone, desktop and CLI",
+    "language": "TypeScript",
+    "score": 24
+  },
+  {
+    "fullName": "esengine/DeepSeek-Reasonix",
+    "forkedDate": "2026-05-17",
+    "stars": 3509,
+    "description": "DeepSeek-native AI coding agent for your terminal. Engineered around prefix-cache stability — leave it running.",
+    "language": "TypeScript",
+    "score": 21
   }
 ]
