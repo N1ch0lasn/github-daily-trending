@@ -1152,5 +1152,21 @@
     "description": "DeepSeek-native AI coding agent for your terminal. Engineered around prefix-cache stability — leave it running.",
     "language": "TypeScript",
     "score": 21
+  },
+  {
+    "fullName": "kapicorp/kapitan",
+    "forkedDate": "2026-05-18",
+    "stars": 1912,
+    "description": "Generic templated configuration management for Kubernetes, Terraform and other things",
+    "language": "Python",
+    "score": 29
+  },
+  {
+    "fullName": "OpenXiangShan/XiangShan",
+    "forkedDate": "2026-05-18",
+    "stars": 7024,
+    "description": "Open-source high-performance RISC-V processor",
+    "language": "Scala",
+    "score": 18
   }
 ]
