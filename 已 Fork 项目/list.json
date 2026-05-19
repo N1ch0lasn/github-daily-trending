@@ -1168,5 +1168,21 @@
     "description": "Open-source high-performance RISC-V processor",
     "language": "Scala",
     "score": 18
+  },
+  {
+    "fullName": "artilleryio/artillery",
+    "forkedDate": "2026-05-19",
+    "stars": 8981,
+    "description": "The complete load testing platform. Everything you need for production-grade load tests. Serverless & distributed. Load test with Playwright. Load test HTTP APIs, GraphQL, WebSocket, and more. Use any Node.js module.",
+    "language": "JavaScript",
+    "score": 36
+  },
+  {
+    "fullName": "dappros/ethora",
+    "forkedDate": "2026-05-19",
+    "stars": 530,
+    "description": "SDK monorepo for Ethora chat / messaging platform. (1) Pick an SDK for your frontend stack. (2) Integrate manually or using ethora-setup. (3) Optionally configure app settings, deploy AI agents etc. Server: ethora.com cloud [free]. Dedicated server + SLA option for enterprise customers.",
+    "language": "JavaScript",
+    "score": 22
   }
 ]
