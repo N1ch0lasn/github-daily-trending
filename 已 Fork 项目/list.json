@@ -1184,5 +1184,21 @@
     "description": "SDK monorepo for Ethora chat / messaging platform. (1) Pick an SDK for your frontend stack. (2) Integrate manually or using ethora-setup. (3) Optionally configure app settings, deploy AI agents etc. Server: ethora.com cloud [free]. Dedicated server + SLA option for enterprise customers.",
     "language": "JavaScript",
     "score": 22
+  },
+  {
+    "fullName": "is-a-dev/register",
+    "forkedDate": "2026-05-20",
+    "stars": 10310,
+    "description": "Grab your own sweet-looking '.is-a.dev' subdomain.",
+    "language": "JavaScript",
+    "score": 36
+  },
+  {
+    "fullName": "web-platform-tests/wpt",
+    "forkedDate": "2026-05-20",
+    "stars": 5934,
+    "description": "Test suites for Web platform specs — including WHATWG, W3C, and others",
+    "language": "HTML",
+    "score": 31
   }
 ]
