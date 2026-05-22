@@ -1216,5 +1216,21 @@
     "description": "Powerful friendly HTTP mock server & proxy library",
     "language": "TypeScript",
     "score": 22
+  },
+  {
+    "fullName": "PDFCraftTool/pdfcraft",
+    "forkedDate": "2026-05-22",
+    "stars": 6118,
+    "description": "PDFCraft is a free, privacy-focused PDF toolkit that runs entirely in your browser. With 90+ professional tools, you can edit, convert, merge, split, and secure your PDF files without ever uploading them to a server.",
+    "language": "JavaScript",
+    "score": 28
+  },
+  {
+    "fullName": "upstash/redis-js",
+    "forkedDate": "2026-05-22",
+    "stars": 946,
+    "description": "HTTP based Redis Client for Serverless and Edge Functions",
+    "language": "TypeScript",
+    "score": 26
   }
 ]
