@@ -1232,5 +1232,21 @@
     "description": "HTTP based Redis Client for Serverless and Edge Functions",
     "language": "TypeScript",
     "score": 26
+  },
+  {
+    "fullName": "boxlite-ai/boxlite",
+    "forkedDate": "2026-05-23",
+    "stars": 2083,
+    "description": "Compute substrate for AI agents: lightweight enough to live on your laptop, elastic enough to scale into the cloud and unleash unlimited resources.",
+    "language": "TypeScript",
+    "score": 24
+  },
+  {
+    "fullName": "radareorg/radare2",
+    "forkedDate": "2026-05-23",
+    "stars": 23899,
+    "description": "UNIX-like reverse engineering framework and command-line toolset",
+    "language": "C",
+    "score": 22
   }
 ]
