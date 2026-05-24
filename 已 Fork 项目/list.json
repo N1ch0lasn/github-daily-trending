@@ -1248,5 +1248,21 @@
     "description": "UNIX-like reverse engineering framework and command-line toolset",
     "language": "C",
     "score": 22
+  },
+  {
+    "fullName": "starkware-libs/cairo",
+    "forkedDate": "2026-05-24",
+    "stars": 1888,
+    "description": "Cairo is the first Turing-complete language for creating provable programs for general computation.",
+    "language": "Rust",
+    "score": 21
+  },
+  {
+    "fullName": "repowise-dev/repowise",
+    "forkedDate": "2026-05-24",
+    "stars": 1821,
+    "description": "Codebase intelligence for AI-assisted engineering teams: code health scores, auto-generated docs, git analytics, dead code detection, and architectural decisions via MCP.",
+    "language": "Python",
+    "score": 21
   }
 ]
