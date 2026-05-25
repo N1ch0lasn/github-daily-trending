@@ -1264,5 +1264,21 @@
     "description": "Codebase intelligence for AI-assisted engineering teams: code health scores, auto-generated docs, git analytics, dead code detection, and architectural decisions via MCP.",
     "language": "Python",
     "score": 21
+  },
+  {
+    "fullName": "modelscope/FunASR",
+    "forkedDate": "2026-05-25",
+    "stars": 16263,
+    "description": "Industrial-grade speech recognition toolkit: 170x realtime, 50+ languages, speaker diarization, emotion detection, streaming, and OpenAI-compatible API.",
+    "language": "Python",
+    "score": 26
+  },
+  {
+    "fullName": "nocodb/nocodb",
+    "forkedDate": "2026-05-25",
+    "stars": 63129,
+    "description": "🔥 🔥 🔥 A Free & Self-hostable Airtable Alternative",
+    "language": "TypeScript",
+    "score": 24
   }
 ]
