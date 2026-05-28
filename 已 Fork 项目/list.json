@@ -1312,5 +1312,21 @@
     "description": "🛡️ A private certificate authority (X.509 & SSH) & ACME server for secure automated certificate management, so you can use TLS everywhere & SSO for SSH.",
     "language": "Go",
     "score": 22
+  },
+  {
+    "fullName": "siddsachar/Thoth",
+    "forkedDate": "2026-05-28",
+    "stars": 1185,
+    "description": "Thoth - Personal AI Sovereignty. A local-first AI assistant with integrated tools, a personal knowledge graph, voice, vision, shell, browser automation, scheduled tasks, health tracking, and messaging channels. Run locally via Ollama or add opt-in cloud models. Your data stays on your machine.",
+    "language": "Python",
+    "score": 31
+  },
+  {
+    "fullName": "eval-exec/neomacs",
+    "forkedDate": "2026-05-28",
+    "stars": 797,
+    "description": "NEO Emacs (WIP): A GPU-powered Emacs written in Rust with a modern display engine.  Aiming for modern design/multi-threaded Elisp, 10x performance and 100% Emacs compatibility. 🚀  Inline 4K images/4K videos/WPEWebKit using GPU acceleration, DMA-BUF, ZERO-COPY. Rich animation effects support.",
+    "language": "Emacs Lisp",
+    "score": 20
   }
 ]
