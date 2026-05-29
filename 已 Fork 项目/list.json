@@ -1328,5 +1328,21 @@
     "description": "NEO Emacs (WIP): A GPU-powered Emacs written in Rust with a modern display engine.  Aiming for modern design/multi-threaded Elisp, 10x performance and 100% Emacs compatibility. 🚀  Inline 4K images/4K videos/WPEWebKit using GPU acceleration, DMA-BUF, ZERO-COPY. Rich animation effects support.",
     "language": "Emacs Lisp",
     "score": 20
+  },
+  {
+    "fullName": "nocobase/nocobase",
+    "forkedDate": "2026-05-29",
+    "stars": 22568,
+    "description": "NocoBase is an open-source AI + no-code platform for building business systems fast. Instead of generating everything from scratch, AI works on top of production-proven infrastructure and a WYSIWYG no-code interface, so you get both speed and reliability.",
+    "language": "TypeScript",
+    "score": 32
+  },
+  {
+    "fullName": "mudler/LocalAI",
+    "forkedDate": "2026-05-29",
+    "stars": 46526,
+    "description": "LocalAI is the open-source AI engine. Run any model - LLMs, vision, voice, image, video - on any hardware. No GPU required.",
+    "language": "Go",
+    "score": 22
   }
 ]
