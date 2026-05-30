@@ -1344,5 +1344,21 @@
     "description": "LocalAI is the open-source AI engine. Run any model - LLMs, vision, voice, image, video - on any hardware. No GPU required.",
     "language": "Go",
     "score": 22
+  },
+  {
+    "fullName": "limecloud/lime",
+    "forkedDate": "2026-05-30",
+    "stars": 1424,
+    "description": "  AI content workspace for Chinese creators: desktop writing, research, prompt   library, knowledge base, and multi-model workflows.",
+    "language": "TypeScript",
+    "score": 27
+  },
+  {
+    "fullName": "nizos/tdd-guard",
+    "forkedDate": "2026-05-30",
+    "stars": 2157,
+    "description": "Automated TDD enforcement for Claude Code",
+    "language": "TypeScript",
+    "score": 20
   }
 ]
