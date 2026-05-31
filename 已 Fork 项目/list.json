@@ -1360,5 +1360,21 @@
     "description": "Automated TDD enforcement for Claude Code",
     "language": "TypeScript",
     "score": 20
+  },
+  {
+    "fullName": "VersusControl/versus-incident",
+    "forkedDate": "2026-05-31",
+    "stars": 476,
+    "description": "An incident management tool supporting multi-channel alerting, customizable messages, on-call integrations, and the built-in AI SRE Agent. Compatible with any tool supporting webhook alerts.",
+    "language": "Go",
+    "score": 24
+  },
+  {
+    "fullName": "breaking-brake/cc-wf-studio",
+    "forkedDate": "2026-05-31",
+    "stars": 5073,
+    "description": "CC Workflow Studio",
+    "language": "TypeScript",
+    "score": 23
   }
 ]
