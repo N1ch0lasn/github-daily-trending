@@ -1376,5 +1376,21 @@
     "description": "CC Workflow Studio",
     "language": "TypeScript",
     "score": 23
+  },
+  {
+    "fullName": "vllm-project/semantic-router",
+    "forkedDate": "2026-06-01",
+    "stars": 4252,
+    "description": "System Level Intelligent Router for Mixture-of-Models at Cloud, Data Center and Edge",
+    "language": "Go",
+    "score": 28
+  },
+  {
+    "fullName": "Lifeforge-app/lifeforge",
+    "forkedDate": "2026-06-01",
+    "stars": 1564,
+    "description": "A self-hosted solution to streamline and organize all aspects of your life.",
+    "language": "TypeScript",
+    "score": 23
   }
 ]
