@@ -1408,5 +1408,21 @@
     "description": "Open-source feature management platform",
     "language": "TypeScript",
     "score": 24
+  },
+  {
+    "fullName": "WinMerge/winmerge",
+    "forkedDate": "2026-06-03",
+    "stars": 8857,
+    "description": "WinMerge is an Open Source differencing and merging tool for Windows. WinMerge can compare both folders and files, presenting differences in a visual text format that is easy to understand and handle.",
+    "language": "C++",
+    "score": 30
+  },
+  {
+    "fullName": "Gitlawb/openclaude",
+    "forkedDate": "2026-06-03",
+    "stars": 28256,
+    "description": "runs anywhere. uses anything",
+    "language": "TypeScript",
+    "score": 24
   }
 ]
