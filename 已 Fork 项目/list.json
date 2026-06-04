@@ -1424,5 +1424,21 @@
     "description": "runs anywhere. uses anything",
     "language": "TypeScript",
     "score": 24
+  },
+  {
+    "fullName": "activepieces/activepieces",
+    "forkedDate": "2026-06-04",
+    "stars": 22558,
+    "description": "AI Agents & MCPs & AI Workflow Automation • (~400 MCP servers for AI agents) • AI Automation / AI Agent with MCPs • AI Workflows & AI Agents • MCPs for AI Agents",
+    "language": "TypeScript",
+    "score": 24
+  },
+  {
+    "fullName": "agentscope-ai/QwenPaw",
+    "forkedDate": "2026-06-04",
+    "stars": 17228,
+    "description": "Your Personal AI Assistant; easy to install, deploy on your own machine or on the cloud; supports multiple chat apps with easily extensible capabilities.",
+    "language": "Python",
+    "score": 22
   }
 ]
